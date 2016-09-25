@@ -1,0 +1,12 @@
+{
+	"projects":
+	[
+		"EventInterfaces",
+		"FileEventProducer",
+		"FileEvents",
+		"LoggingImplementations",
+		"LoggingInterfaces",
+		"ReceivedFileEventConsumer",
+		"RemovedFileEventConsumer"
+	]
+}
