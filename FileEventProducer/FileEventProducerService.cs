@@ -55,8 +55,8 @@ namespace FileEventProducer
 
             try
             {
-                _channel.ExchangeDeclare("FileEvents.FileReceived:FileEvents", "topic", true, false, null);
-                _channel.ExchangeDeclare("FileEvents.FileRemoved:FileEvents", "topic", true, false, null);
+                _channel.ExchangeDeclare("FileEvents.FileReceived:FileEvents", "fanout", true, false, null);
+                _channel.ExchangeDeclare("FileEvents.FileRemoved:FileEvents", "fanout", true, false, null);
 
                 var eventFileReceived = new FileReceived(@"\\whackity\share\filename.pgp");
                 var eventFileRemoved = new FileRemoved(@"\\whackity\share\otherfile.txt");

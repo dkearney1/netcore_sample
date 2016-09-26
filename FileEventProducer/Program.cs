@@ -11,13 +11,6 @@ namespace FileEventProducer
     {
         public static void Main(string[] args)
         {
-#if DEBUG
-            var config = new ConfigurationBuilder()
-                                .SetBasePath(Directory.GetCurrentDirectory())
-                                .AddJsonFile("appsettings.json")
-                                .AddEnvironmentVariables()
-                                .Build();
-#else
             var assemblyName = System.Reflection.Assembly.GetEntryAssembly().Location;
             var assemblyDir = assemblyName.Replace(Path.GetFileName(assemblyName), string.Empty);
 
@@ -26,7 +19,6 @@ namespace FileEventProducer
                                 .AddJsonFile("appsettings.json")
                                 .AddEnvironmentVariables()
                                 .Build();
-#endif
 
             var containerBuilder = new ContainerBuilder();
 

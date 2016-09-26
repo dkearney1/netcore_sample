@@ -24,6 +24,8 @@ namespace FileEventProducer
 
             var process = System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
 
+            Console.Out.WriteLine($"Connecting to message broker at {rabbitConnectionFactory.HostName}:{rabbitConnectionFactory.Port}");
+
             _connection = rabbitConnectionFactory.CreateConnection(process);
         }
 

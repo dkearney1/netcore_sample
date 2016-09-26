@@ -6,7 +6,7 @@ LABEL	version = "1.0" \
 	description = "Removed File Event Consumer"
 
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
+	&& apt-get install -y --no-install-recommends --force-yes \
 		apt-utils \
 	&& rm -rf /var/lib/apt/lists/*
 
